@@ -20,7 +20,7 @@ const plans = [
       "Email support",
     ],
     cta: "Start Free Trial",
-    ctaHref: "https://app.deskmed.in/setup",
+    ctaHref: "https://app.deskmed.online/setup",
     featured: false,
   },
   {

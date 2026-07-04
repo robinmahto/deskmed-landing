@@ -32,7 +32,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
           <a
-            href="https://app.deskmed.in/setup"
+            href="https://app.deskmed.online/setup"
             className="bg-[#FF5C3A] text-white px-7 py-3.5 rounded-xl font-medium text-sm hover:bg-[#e84e2d] transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-[#FF5C3A]/20"
           >
             Start Free Trial

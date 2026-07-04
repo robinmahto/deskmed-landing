@@ -24,7 +24,7 @@ const legalLinks = [
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },
   { label: "DPDP Compliance", href: "/dpdp" },
-  { label: "Status", href: "https://status.deskmed.in" },
+  { label: "Status", href: "https://app.deskmed.online" },
 ];
 
 function LinkColumn({
@@ -84,7 +84,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center justify-center gap-5 flex-wrap">
               <a
-                href="https://app.deskmed.in/setup"
+                href="https://app.deskmed.online/setup"
                 className="group relative inline-flex items-center gap-2 bg-[#FF5C3A] text-white px-8 py-4 rounded-xl font-medium text-sm hover:bg-[#e84e2d] transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-[#FF5C3A]/25"
               >
                 Start Free Trial

@@ -70,7 +70,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://app.deskmed.in/login"
+              href="https://app.deskmed.online/login"
               className="text-sm text-white/55 transition-colors duration-200 hover:text-white"
             >
               Login
@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* Right cluster */}
           <div className="flex items-center gap-3">
             <a
-              href="https://app.deskmed.in/setup"
+              href="https://app.deskmed.online/setup"
               className="hidden whitespace-nowrap rounded-lg bg-[#FF5C3A] px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#e84e2d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5C3A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1117] md:inline-flex"
             >
               Start Free Trial
@@ -147,7 +147,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="https://app.deskmed.in/login"
+                href="https://app.deskmed.online/login"
                 onClick={closeAndRestoreFocus}
                 className="border-b border-white/5 py-4 text-2xl font-medium text-white/90 transition-colors duration-200 hover:text-[#FF5C3A] focus-visible:outline-none focus-visible:text-[#FF5C3A]"
               >
@@ -157,7 +157,7 @@ export default function Navbar() {
 
             {/* CTA pinned near the bottom */}
             <a
-              href="https://app.deskmed.in/setup"
+              href="https://app.deskmed.online/setup"
               onClick={closeAndRestoreFocus}
               className="mt-auto mb-10 inline-flex items-center justify-center gap-2 rounded-xl bg-[#FF5C3A] px-6 py-4 text-base font-semibold text-white transition-colors duration-200 hover:bg-[#e84e2d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5C3A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1117]"
             >
