@@ -15,7 +15,7 @@ describe("Hero", () => {
   it("renders Start Free Trial CTA linking to setup", () => {
     render(<Hero />);
     const cta = screen.getByRole("link", { name: "Start Free Trial" });
-    expect(cta).toHaveAttribute("href", "https://app.deskmed.in/setup");
+    expect(cta).toHaveAttribute("href", "https://app.deskmed.online/setup");
   });
 
   it("renders See Features link", () => {

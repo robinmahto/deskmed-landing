@@ -89,7 +89,7 @@ const content: LegalContent = {
       id: "contact",
       heading: "10. Changes and contact",
       paragraphs: [
-        "We may update this policy from time to time; material changes will be reflected by the “last updated” date above. Questions about this policy can be sent to privacy@deskmed.in.",
+        "We may update this policy from time to time; material changes will be reflected by the “last updated” date above. Questions about this policy can be sent to privacy@deskmedai.com.",
       ],
     },
   ],

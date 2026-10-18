@@ -31,7 +31,7 @@ function Avatar({ initials, size }: { initials: string; size: "lg" | "sm" }) {
   return (
     <span
       aria-hidden="true"
-      className={`flex ${dims} shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#FF5C3A] to-[#e84e2d] font-display font-bold tracking-tight text-white shadow-lg shadow-[#FF5C3A]/20`}
+      className={`flex ${dims} shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#0284C7] to-[#0D9488] font-display font-bold tracking-tight text-white shadow-md shadow-sky-600/20`}
     >
       {initials}
     </span>
@@ -40,13 +40,13 @@ function Avatar({ initials, size }: { initials: string; size: "lg" | "sm" }) {
 
 export default function AboutTeam() {
   return (
-    <section className="relative overflow-hidden bg-[#FAFAF6] py-24 sm:py-28">
+    <section className="relative overflow-hidden bg-slate-50/50 py-24 sm:py-28 border-t border-slate-200/80">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF5C3A]">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0284C7]">
             The People
           </p>
-          <h2 className="font-display text-3xl font-bold leading-tight text-[#0D1117] sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
             A small team that loves clinics
           </h2>
           <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-[#1C1C28]/65">

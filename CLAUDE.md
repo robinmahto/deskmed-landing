@@ -13,7 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 The **DeskMed landing page** — the public marketing site for the DeskMed clinic platform. A
 single static Next.js 14 (App Router) + TypeScript + Tailwind page. No authentication, no
 backend calls; its job is to convert visitors and hand them off to the dashboard at
-`app.deskmed.in`.
+`app.deskmed.online`.
 
 ---
 
@@ -71,7 +71,7 @@ the page is static apart from the testimonial slider's local `useState`.
 
 There is **no API and no fetching.** All content (stats, feature cards, pricing plans,
 testimonials) is defined as **module-level arrays inside each component** and rendered
-directly. All CTAs link to the app subdomain: `https://app.deskmed.in/...`. To change copy or
+directly. All CTAs link to the app subdomain: `https://app.deskmed.online/...`. To change copy or
 offers, edit the arrays in the relevant component.
 
 ---

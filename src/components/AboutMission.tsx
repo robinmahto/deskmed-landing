@@ -12,17 +12,17 @@ export default function AboutMission() {
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           {/* Sticky heading */}
           <div className="md:col-span-4">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF5C3A]">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0284C7]">
               Our Mission
             </p>
-            <h2 className="font-display text-3xl font-bold leading-tight text-[#0D1117] sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
               Healthcare runs on details. We sweat them so doctors don&rsquo;t.
             </h2>
           </div>
 
           {/* Narrative */}
           <div className="md:col-span-8">
-            <div className="space-y-6 text-base leading-relaxed text-[#1C1C28]/75 md:text-lg">
+            <div className="space-y-6 text-base leading-relaxed text-slate-600 md:text-lg">
               <p>
                 A clinic is one of the most information-dense businesses in the
                 world. Every visit is a small mountain of records &mdash;
@@ -45,8 +45,8 @@ export default function AboutMission() {
             </div>
 
             {/* Pull quote */}
-            <blockquote className="mt-10 border-l-2 border-[#FF5C3A] pl-6">
-              <p className="font-display text-xl font-medium italic leading-snug text-[#0D1117] md:text-2xl">
+            <blockquote className="mt-10 border-l-2 border-[#0284C7] pl-6">
+              <p className="font-display text-xl font-medium italic leading-snug text-slate-900 md:text-2xl">
                 &ldquo;If the software gets out of the way, the care gets
                 better. That&rsquo;s the whole job.&rdquo;
               </p>

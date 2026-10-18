@@ -15,8 +15,8 @@ describe("ContactMain", () => {
   it("renders direct contact channels", () => {
     render(<ContactMain />);
     expect(
-      screen.getByRole("link", { name: /sales@deskmed\.in/i })
-    ).toHaveAttribute("href", "mailto:sales@deskmed.in");
+      screen.getByRole("link", { name: /sales@deskmedai\.com/i })
+    ).toHaveAttribute("href", "mailto:sales@deskmedai.com");
     expect(
       screen.getByRole("link", { name: /WhatsApp/i })
     ).toHaveAttribute("href", "https://wa.me/918047182200");

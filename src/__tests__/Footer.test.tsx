@@ -12,12 +12,18 @@ describe("Footer", () => {
   it("renders Start Free Trial CTA linking to setup", () => {
     render(<Footer />);
     const cta = screen.getByRole("link", { name: "Start Free Trial" });
-    expect(cta).toHaveAttribute("href", "https://app.deskmed.in/setup");
+    expect(cta).toHaveAttribute("href", "https://app.deskmed.online/setup");
   });
 
-  it("renders deskmed.in branding in footer", () => {
+  it("renders deskmedai.com branding in footer", () => {
     render(<Footer />);
-    expect(screen.getByText(/deskmed\.in/i)).toBeInTheDocument();
+    expect(screen.getByText(/deskmedai\.com/i)).toBeInTheDocument();
+  });
+
+  it("renders DeskMed AI logo linking to the hero section", () => {
+    render(<Footer />);
+    const logo = screen.getByRole("link", { name: "DeskMed AI home" });
+    expect(logo).toHaveAttribute("href", "/#hero");
   });
 
   it("renders Privacy and Terms links", () => {
@@ -29,7 +35,7 @@ describe("Footer", () => {
   it("renders Support link pointing to support email", () => {
     render(<Footer />);
     const support = screen.getByRole("link", { name: "Support" });
-    expect(support).toHaveAttribute("href", "mailto:support@deskmed.in");
+    expect(support).toHaveAttribute("href", "mailto:support@deskmedai.com");
   });
 
   it("renders Contact link pointing to the contact page", () => {
@@ -40,6 +46,6 @@ describe("Footer", () => {
 
   it("renders copyright notice", () => {
     render(<Footer />);
-    expect(screen.getByText(/© 2026 DeskMed/i)).toBeInTheDocument();
+    expect(screen.getByText(/© 2026 DeskMed AI/i)).toBeInTheDocument();
   });
 });

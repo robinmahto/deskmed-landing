@@ -3,9 +3,10 @@ import userEvent from "@testing-library/user-event";
 import Navbar from "@/components/Navbar";
 
 describe("Navbar", () => {
-  it("renders the DeskMed logo text", () => {
+  it("renders the DeskMed AI logo linking to the hero section", () => {
     render(<Navbar />);
-    expect(screen.getByText("DeskMed")).toBeInTheDocument();
+    const logo = screen.getByRole("link", { name: /DeskMed AI/i });
+    expect(logo).toHaveAttribute("href", "/#hero");
   });
 
   it("renders Features, Pricing, and Testimonials nav links", () => {
@@ -18,13 +19,13 @@ describe("Navbar", () => {
   it("renders Login link pointing to app subdomain", () => {
     render(<Navbar />);
     const login = screen.getByRole("link", { name: "Login" });
-    expect(login).toHaveAttribute("href", "https://app.deskmed.in/login");
+    expect(login).toHaveAttribute("href", "https://app.deskmed.online/login");
   });
 
   it("renders Start Free Trial CTA pointing to setup", () => {
     render(<Navbar />);
     const cta = screen.getByRole("link", { name: "Start Free Trial" });
-    expect(cta).toHaveAttribute("href", "https://app.deskmed.in/setup");
+    expect(cta).toHaveAttribute("href", "https://app.deskmed.online/setup");
   });
 
   describe("mobile menu", () => {
@@ -47,7 +48,7 @@ describe("Navbar", () => {
       expect(within(dialog).getByRole("link", { name: "Features" })).toBeInTheDocument();
       expect(
         within(dialog).getByRole("link", { name: "Start Free Trial" })
-      ).toHaveAttribute("href", "https://app.deskmed.in/setup");
+      ).toHaveAttribute("href", "https://app.deskmed.online/setup");
       expect(
         screen.getByRole("button", { name: "Open menu" })
       ).toHaveAttribute("aria-expanded", "true");

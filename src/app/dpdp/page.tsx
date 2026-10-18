@@ -73,7 +73,7 @@ const content: LegalContent = {
       id: "grievance",
       heading: "8. Grievance officer and contact",
       paragraphs: [
-        "For questions about our DPDP practices, or to raise a grievance, you can contact our Grievance Officer at grievance@deskmed.in. We aim to acknowledge grievances within the timelines prescribed under the Act.",
+        "For questions about our DPDP practices, or to raise a grievance, you can contact our Grievance Officer at grievance@deskmedai.com. We aim to acknowledge grievances within the timelines prescribed under the Act.",
       ],
     },
   ],

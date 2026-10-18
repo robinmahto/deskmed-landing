@@ -17,7 +17,7 @@ const companyLinks = [
   { label: "Contact", href: "/contact" },
   { label: "Careers", href: "/careers" },
   { label: "Blog", href: "/blog" },
-  { label: "Support", href: "mailto:support@deskmed.in" },
+  { label: "Support", href: "mailto:support@deskmedai.com" },
 ];
 
 const legalLinks = [
@@ -44,10 +44,10 @@ function LinkColumn({
           <li key={link.label}>
             <a
               href={link.href}
-              className="group inline-flex items-center gap-1.5 text-sm text-white/55 hover:text-white transition-colors duration-200"
+              className="group inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors duration-200"
             >
               {link.label}
-              <span className="h-px w-0 bg-[#FF5C3A] group-hover:w-4 transition-all duration-300 ease-out" />
+              <span className="h-px w-0 bg-[#0284C7] group-hover:w-4 transition-all duration-300 ease-out" />
             </a>
           </li>
         ))}
@@ -58,34 +58,34 @@ function LinkColumn({
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0D1117] overflow-hidden">
-      {/* Ambient coral glow */}
+    <footer className="relative bg-[#0F172A] overflow-hidden">
+      {/* Ambient clinical blue glow */}
       <div
         aria-hidden="true"
-        className="animate-glow pointer-events-none absolute left-1/2 -top-24 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-[#FF5C3A] opacity-60 blur-[120px]"
+        className="animate-glow pointer-events-none absolute left-1/2 -top-24 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-[#0284C7] opacity-25 blur-[120px]"
       />
       {/* Dotted texture */}
-      <div aria-hidden="true" className="bg-dot-grid absolute inset-0 opacity-70" />
+      <div aria-hidden="true" className="bg-dot-grid-dark absolute inset-0 opacity-60" />
 
       <div className="relative">
         {/* CTA band */}
-        <section className="border-b border-white/[0.06] py-24 sm:py-28">
+        <section className="border-b border-white/[0.08] py-24 sm:py-28">
           <div className="max-w-3xl mx-auto px-6 text-center">
-            <p className="text-[#FF5C3A] text-xs font-semibold tracking-[0.2em] uppercase mb-5">
+            <p className="text-[#0284C7] text-xs font-semibold tracking-[0.2em] uppercase mb-5">
               Start today
             </p>
             <h2 className="font-display text-4xl md:text-6xl font-bold text-white leading-[1.05] mb-6">
               Ready to modernise
               <br className="hidden sm:block" /> your clinic?
             </h2>
-            <p className="text-white/50 text-base md:text-lg mb-10 max-w-md mx-auto leading-relaxed">
-              Join 2,400+ clinics already on DeskMed. Free for 14 days,
+            <p className="text-white/60 text-base md:text-lg mb-10 max-w-md mx-auto leading-relaxed">
+              Join 2,400+ clinics already on DeskMed AI. Free for 14 days,
               no card needed.
             </p>
             <div className="flex items-center justify-center gap-5 flex-wrap">
               <a
                 href="https://app.deskmed.online/setup"
-                className="group relative inline-flex items-center gap-2 bg-[#FF5C3A] text-white px-8 py-4 rounded-xl font-medium text-sm hover:bg-[#e84e2d] transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-[#FF5C3A]/25"
+                className="group relative inline-flex items-center gap-2 bg-[#0284C7] text-white px-8 py-4 rounded-xl font-medium text-sm hover:bg-[#0369A1] transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-sky-600/30"
               >
                 Start Free Trial
                 <svg
@@ -105,8 +105,8 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:support@deskmed.in"
-                className="text-white/60 hover:text-white text-sm transition-colors duration-200 underline-offset-4 hover:underline"
+                href="mailto:support@deskmedai.com"
+                className="text-white/70 hover:text-white text-sm transition-colors duration-200 underline-offset-4 hover:underline"
               >
                 Talk to us
               </a>
@@ -119,8 +119,12 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-12 gap-y-12 gap-x-8">
             {/* Brand block */}
             <div className="col-span-2 md:col-span-4 md:pr-8">
-              <div className="flex items-center gap-2.5 mb-4">
-                <div className="w-7 h-7 bg-[#FF5C3A] rounded-md flex items-center justify-center shrink-0">
+              <a
+                href="/#hero"
+                className="group inline-flex items-center gap-2.5 mb-4 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7]"
+                aria-label="DeskMed AI home"
+              >
+                <div className="w-7 h-7 bg-[#0284C7] rounded-md flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#0369A1] transition-colors">
                   <svg width="11" height="11" viewBox="0 0 10 10" fill="none">
                     <path
                       d="M5 1v8M1 5h8"
@@ -130,11 +134,11 @@ export default function Footer() {
                     />
                   </svg>
                 </div>
-                <span className="text-white text-base font-semibold tracking-tight">
-                  DeskMed
+                <span className="text-white text-base font-semibold tracking-tight group-hover:text-white/90 transition-colors">
+                  DeskMed AI
                 </span>
-              </div>
-              <p className="text-white/45 text-sm leading-relaxed max-w-[15rem] mb-6">
+              </a>
+              <p className="text-white/50 text-sm leading-relaxed max-w-[15rem] mb-6">
                 The all-in-one operating system for modern Indian clinics —
                 appointments, EMR, labs and billing in one place.
               </p>
@@ -146,7 +150,7 @@ export default function Footer() {
                   <span className="h-1/3 bg-white" />
                   <span className="h-1/3 bg-[#138808]" />
                 </span>
-                <span className="text-white/55 text-xs font-medium">
+                <span className="text-white/60 text-xs font-medium">
                   Made in India
                 </span>
               </div>
@@ -174,7 +178,7 @@ export default function Footer() {
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
-                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-white/55 hover:text-white hover:border-[#FF5C3A]/40 hover:bg-[#FF5C3A]/10 transition-colors duration-200"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-white/55 hover:text-white hover:border-sky-500/40 hover:bg-sky-500/10 transition-colors duration-200"
                   >
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
                       <path d={s.path} />
@@ -200,15 +204,15 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-16 pt-7 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-white/35 text-xs order-2 sm:order-1">
-              © 2026 DeskMed. All rights reserved.
+          <div className="mt-16 pt-7 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-white/40 text-xs order-2 sm:order-1">
+              © 2026 DeskMed AI. All rights reserved.
             </p>
             <div className="flex items-center gap-2 order-1 sm:order-2 text-xs">
-              <span className="flex h-1.5 w-1.5 rounded-full bg-[#16A34A] shadow-[0_0_8px_#16A34A]" />
-              <span className="text-white/45">All systems operational</span>
-              <span className="text-white/15">·</span>
-              <span className="text-white/35">deskmed.in</span>
+              <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981]" />
+              <span className="text-white/50">All systems operational</span>
+              <span className="text-white/20">·</span>
+              <span className="text-white/40">deskmedai.com</span>
             </div>
           </div>
         </div>
@@ -218,8 +222,8 @@ export default function Footer() {
           aria-hidden="true"
           className="pointer-events-none select-none overflow-hidden"
         >
-          <p className="font-display font-bold text-white/[0.04] leading-none text-center whitespace-nowrap text-[24vw] -mb-[6vw] tracking-tight">
-            DeskMed
+          <p className="font-display font-bold text-white/[0.03] leading-none text-center whitespace-nowrap text-[24vw] -mb-[6vw] tracking-tight">
+            DeskMed AI
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ describe("SecurityCompliance", () => {
 
   it("renders a responsible-disclosure link to security email", () => {
     render(<SecurityCompliance />);
-    const link = screen.getByRole("link", { name: /security@deskmed\.in/i });
-    expect(link).toHaveAttribute("href", "mailto:security@deskmed.in");
+    const link = screen.getByRole("link", { name: /security@deskmedai\.com/i });
+    expect(link).toHaveAttribute("href", "mailto:security@deskmedai.com");
   });
 });

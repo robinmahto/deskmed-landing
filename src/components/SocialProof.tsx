@@ -52,42 +52,22 @@ const stats = [
 
 export default function SocialProof() {
   return (
-    <section className="relative overflow-hidden bg-[#FF5C3A]">
-      {/* Top highlight + dotted texture for depth */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/15 to-transparent"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.12]"
-        style={{
-          backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
-      />
-      {/* Bottom vignette */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/10 to-transparent"
-      />
-
+    <section className="relative overflow-hidden bg-slate-50/75 border-y border-slate-200/80">
       <div className="relative max-w-6xl mx-auto px-6 py-14 md:py-16">
         {/* Eyebrow */}
-        <div className="flex items-center justify-center gap-3 mb-11">
-          <span className="h-px w-8 bg-white/30" />
-          <p className="text-white/80 text-[11px] font-semibold tracking-[0.22em] uppercase text-center">
+        <div className="flex items-center justify-center gap-3 mb-10">
+          <span className="h-px w-8 bg-slate-200" />
+          <p className="text-slate-500 text-[11px] font-semibold tracking-[0.2em] uppercase text-center">
             Trusted by clinics across India
           </p>
-          <span className="h-px w-8 bg-white/30" />
+          <span className="h-px w-8 bg-slate-200" />
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((stat, i) => {
             const dividers = [
-              "border-white/[0.18]",
+              "border-slate-200/80",
               i % 2 === 1 ? "border-l" : "",
               i >= 2 ? "border-t md:border-t-0" : "",
               i !== 0 ? "md:border-l" : "md:border-l-0",
@@ -96,19 +76,19 @@ export default function SocialProof() {
             return (
               <div
                 key={stat.label}
-                className={`group flex flex-col items-center text-center px-4 py-8 md:py-4 ${dividers}`}
+                className={`group flex flex-col items-center text-center px-4 py-8 md:py-4 transition-all duration-200 ${dividers}`}
               >
                 {/* Icon chip */}
-                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/15 transition-all duration-300 group-hover:bg-white/25 group-hover:-translate-y-0.5">
+                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#0284C7] ring-1 ring-slate-200/80 shadow-xs transition-all duration-300 group-hover:bg-sky-50 group-hover:ring-sky-200 group-hover:-translate-y-0.5">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     {stat.icon}
                   </svg>
                 </span>
 
-                <p className="font-display text-4xl md:text-[2.75rem] font-bold text-white leading-none mb-2 transition-transform duration-300 group-hover:-translate-y-0.5">
+                <p className="font-display text-4xl md:text-[2.75rem] font-bold text-slate-900 leading-none mb-2 transition-transform duration-300 group-hover:-translate-y-0.5 tabular-nums">
                   {stat.value}
                 </p>
-                <p className="text-white/70 text-xs md:text-sm font-medium tracking-wide">
+                <p className="text-slate-600 text-xs md:text-sm font-medium tracking-wide">
                   {stat.label}
                 </p>
               </div>

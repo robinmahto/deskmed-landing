@@ -84,7 +84,7 @@ const content: LegalContent = {
       id: "governing-law",
       heading: "10. Governing law and contact",
       paragraphs: [
-        "These Terms are governed by the laws of India, and the courts of Bengaluru, Karnataka have exclusive jurisdiction. Questions about these Terms can be sent to legal@deskmed.in.",
+        "These Terms are governed by the laws of India, and the courts of Bengaluru, Karnataka have exclusive jurisdiction. Questions about these Terms can be sent to legal@deskmedai.com.",
       ],
     },
   ],

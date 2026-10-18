@@ -39,4 +39,4 @@ directly.
 ## Design
 
 Dark navy (`#0D1117`) base with coral (`#FF5C3A`) accent; Playfair Display for display
-headings, DM Sans for body. CTAs point at the app subdomain (`app.deskmed.in`).
+headings, DM Sans for body. CTAs point at the app subdomain (`app.deskmed.online`).

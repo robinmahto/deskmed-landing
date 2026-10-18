@@ -6,17 +6,17 @@ const highlights = [
 
 export default function ContactHero() {
   return (
-    <section className="relative overflow-hidden bg-[#0D1117] pt-36 pb-20 sm:pt-40 sm:pb-24">
-      {/* Ambient coral glow */}
+    <section className="relative overflow-hidden bg-[#0F172A] pt-36 pb-20 sm:pt-40 sm:pb-24">
+      {/* Ambient blue glow */}
       <div
         aria-hidden="true"
-        className="animate-glow pointer-events-none absolute left-1/2 -top-28 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#FF5C3A] opacity-50 blur-[130px]"
+        className="animate-glow pointer-events-none absolute left-1/2 -top-28 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#0284C7] opacity-40 blur-[130px]"
       />
       {/* Dotted texture */}
-      <div aria-hidden="true" className="bg-dot-grid absolute inset-0 opacity-70" />
+      <div aria-hidden="true" className="bg-dot-grid-dark absolute inset-0 opacity-60" />
 
       <div className="relative mx-auto max-w-4xl px-6 text-center">
-        <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF5C3A]">
+        <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0284C7]">
           Contact
         </p>
         <h1 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-6xl md:text-[4.25rem]">

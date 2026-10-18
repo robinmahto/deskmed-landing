@@ -1,31 +1,37 @@
 export default function Hero() {
   return (
-    <section className="bg-[#0D1117] pt-28 pb-0 overflow-hidden relative">
+    <section id="hero" className="bg-white pt-28 pb-0 overflow-hidden relative">
 
-      {/* Ambient glow */}
+      {/* Ambient background glow — clean clinical sky/mint tint */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full opacity-20 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, #FF5C3A 0%, transparent 70%)" }}
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[360px] rounded-full opacity-60 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse at 50% 0%, #e0f2fe 0%, #ecfdf5 45%, transparent 75%)" }}
       />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
 
-        {/* Badge */}
-        <div className="flex justify-center mb-10">
-          <span className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/60 text-xs px-3 py-1.5 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF5C3A] shrink-0" />
-            Trusted by 2,400+ clinics across India
+        {/* Cal.com style trust pill badge */}
+        <div className="flex justify-center mb-8">
+          <span className="inline-flex items-center gap-2 bg-white/90 border border-slate-200/90 text-slate-700 text-xs px-3.5 py-1.5 rounded-full shadow-xs backdrop-blur-xs">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="font-medium text-slate-800">Trusted by 2,400+ clinics across India</span>
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="font-display text-center text-[clamp(2.6rem,6vw,4.5rem)] font-bold text-white leading-[1.08] tracking-tight mb-6">
+        <h1 className="font-display text-center text-[clamp(2.6rem,5.5vw,4.5rem)] font-bold text-slate-900 leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
           One dashboard for your{" "}
-          <em className="not-italic text-[#FF5C3A]">entire</em> clinic
+          <em className="not-italic text-[#0284C7] bg-gradient-to-r from-[#0284C7] to-[#0D9488] bg-clip-text text-transparent">
+            entire
+          </em>{" "}
+          clinic
         </h1>
 
         {/* Subtext */}
-        <p className="text-center text-white/45 text-lg max-w-lg mx-auto leading-relaxed mb-10">
+        <p className="text-center text-slate-600 text-lg max-w-lg mx-auto leading-relaxed mb-10">
           Appointments, EMR, prescriptions, billing, lab reports — built for how Indian clinics actually work. Free to start.
         </p>
 
@@ -33,13 +39,13 @@ export default function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
           <a
             href="https://app.deskmed.online/setup"
-            className="bg-[#FF5C3A] text-white px-7 py-3.5 rounded-xl font-medium text-sm hover:bg-[#e84e2d] transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-[#FF5C3A]/20"
+            className="bg-[#0F172A] text-white px-7 py-3.5 rounded-xl font-medium text-sm hover:bg-[#1E293B] transition-all duration-200 hover:-translate-y-0.5 shadow-md shadow-slate-900/10 hover:shadow-lg"
           >
             Start Free Trial
           </a>
           <a
             href="#features"
-            className="text-white/50 hover:text-white text-sm flex items-center gap-1.5 transition-colors duration-200"
+            className="text-slate-700 hover:text-slate-900 text-sm flex items-center gap-2 transition-all duration-200 font-medium px-4 py-3.5 rounded-xl hover:bg-slate-50 border border-slate-200/80 bg-white/60 shadow-xs"
           >
             See Features
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -48,37 +54,40 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Dashboard mockup */}
+        {/* Dashboard mockup (Cal.com style light clinical UI) */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Blue glow under dashboard */}
+          {/* Soft shadow/glow underneath */}
           <div
-            className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-24 opacity-30 blur-2xl pointer-events-none"
-            style={{ background: "radial-gradient(ellipse, #2A6BDB 0%, transparent 70%)" }}
+            className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-24 opacity-40 blur-2xl pointer-events-none"
+            style={{ background: "radial-gradient(ellipse, #bae6fd 0%, transparent 70%)" }}
           />
 
-          <div className="relative rounded-t-2xl overflow-hidden border border-white/10 shadow-2xl">
+          <div className="relative rounded-t-2xl overflow-hidden border border-slate-200/90 shadow-2xl bg-white">
             {/* Window chrome */}
-            <div className="bg-[#0F1420] flex items-center gap-1.5 px-4 py-3 border-b border-white/5">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
-              <div className="ml-4 flex-1 max-w-xs bg-white/5 rounded px-3 py-1 text-white/25 text-xs">
-                app.deskmed.in/dashboard
+            <div className="bg-slate-50/90 flex items-center justify-between px-4 py-3 border-b border-slate-200">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
               </div>
+              <div className="max-w-xs bg-white border border-slate-200/80 rounded-md px-3 py-1 text-slate-500 text-xs font-mono shadow-xs">
+                app.deskmed.online/dashboard
+              </div>
+              <div className="w-12" />
             </div>
 
             {/* App layout */}
-            <div className="flex bg-[#0F1420]" style={{ height: "320px" }}>
+            <div className="flex bg-white" style={{ minHeight: "340px" }}>
 
-              {/* Sidebar — hidden on phones so the dashboard area gets full width */}
-              <div className="hidden sm:flex w-44 shrink-0 border-r border-white/5 p-4 flex-col gap-0.5">
+              {/* Sidebar */}
+              <div className="hidden sm:flex w-48 shrink-0 border-r border-slate-200 bg-slate-50/60 p-4 flex-col gap-1">
                 <div className="flex items-center gap-2 px-2 mb-5">
-                  <div className="w-5 h-5 bg-[#FF5C3A] rounded flex items-center justify-center">
+                  <div className="w-5 h-5 bg-[#0284C7] rounded flex items-center justify-center shadow-xs">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                       <path d="M5 1v8M1 5h8" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <span className="text-white/80 text-xs font-semibold">DeskMed</span>
+                  <span className="text-slate-900 text-xs font-bold tracking-tight">DeskMed</span>
                 </div>
                 {[
                   { label: "Dashboard", active: true },
@@ -89,10 +98,10 @@ export default function Hero() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className={`px-2 py-1.5 rounded-md text-xs transition-colors ${
+                    className={`px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
                       item.active
-                        ? "bg-white/10 text-white font-medium"
-                        : "text-white/35"
+                        ? "bg-[#0284C7]/10 text-[#0284C7]"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/70"
                     }`}
                   >
                     {item.label}
@@ -101,27 +110,35 @@ export default function Hero() {
               </div>
 
               {/* Main area */}
-              <div className="flex-1 p-4 sm:p-5 overflow-hidden">
-                <div className="text-white/40 text-xs mb-4">Good morning, Dr. Mehta</div>
+              <div className="flex-1 p-4 sm:p-5 overflow-hidden bg-white">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-slate-900 font-semibold text-xs">Good morning, Dr. Mehta</div>
+                  <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    OPD Active · Token #14
+                  </span>
+                </div>
 
                 {/* Stat cards */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
                   {[
-                    { label: "Today's Patients", value: "24", delta: "+3" },
-                    { label: "Pending Billing", value: "₹18.4k", delta: "4 invoices" },
-                    { label: "Lab Reports", value: "7", delta: "new" },
+                    { label: "Today's Patients", value: "24", delta: "+3 queue", deltaColor: "text-emerald-600 bg-emerald-50" },
+                    { label: "Pending Billing", value: "₹18.4k", delta: "4 invoices", deltaColor: "text-amber-700 bg-amber-50" },
+                    { label: "Lab Reports", value: "7", delta: "new ready", deltaColor: "text-sky-700 bg-sky-50" },
                   ].map((stat) => (
-                    <div key={stat.label} className="bg-white/[0.04] border border-white/5 rounded-lg p-2.5 sm:p-3">
-                      <div className="text-white/35 text-[10px] leading-tight mb-1.5">{stat.label}</div>
-                      <div className="text-white font-semibold text-sm sm:text-base leading-none mb-1">{stat.value}</div>
-                      <div className="text-[#28C840] text-[10px] leading-tight">{stat.delta}</div>
+                    <div key={stat.label} className="bg-slate-50/70 border border-slate-200/80 rounded-xl p-2.5 sm:p-3 shadow-xs">
+                      <div className="text-slate-500 text-[10px] font-medium leading-tight mb-1">{stat.label}</div>
+                      <div className="text-slate-900 font-bold text-sm sm:text-base leading-none mb-1.5">{stat.value}</div>
+                      <div className={`text-[10px] font-medium px-1.5 py-0.5 rounded-md inline-block ${stat.deltaColor}`}>
+                        {stat.delta}
+                      </div>
                     </div>
                   ))}
                 </div>
 
                 {/* Today's schedule */}
-                <div className="bg-white/[0.04] border border-white/5 rounded-lg p-3">
-                  <div className="text-white/35 text-[10px] uppercase tracking-wider mb-2.5">
+                <div className="bg-slate-50/50 border border-slate-200/80 rounded-xl p-3 shadow-xs">
+                  <div className="text-slate-500 font-semibold text-[10px] uppercase tracking-wider mb-2.5">
                     Today's Schedule
                   </div>
                   {[
@@ -132,22 +149,24 @@ export default function Hero() {
                   ].map((appt) => (
                     <div
                       key={appt.time}
-                      className="flex items-center gap-3 py-1.5 border-b border-white/[0.04] last:border-0"
+                      className="flex items-center gap-3 py-1.5 border-b border-slate-200/60 last:border-0"
                     >
-                      <span className="text-white/25 text-[10px] w-9 shrink-0">{appt.time}</span>
+                      <span className="text-slate-400 font-mono text-[10px] w-10 shrink-0">{appt.time}</span>
                       <span
-                        className={`text-xs flex-1 ${
-                          appt.status === "done" ? "text-white/25 line-through" :
-                          appt.status === "active" ? "text-white" : "text-white/55"
+                        className={`text-xs font-medium flex-1 ${
+                          appt.status === "done" ? "text-slate-400 line-through" :
+                          appt.status === "active" ? "text-slate-900 font-semibold" : "text-slate-700"
                         }`}
                       >
                         {appt.name}
                       </span>
                       <span
-                        className={`text-[10px] px-1.5 py-0.5 rounded text-white/40 ${
+                        className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
                           appt.status === "active"
-                            ? "bg-[#FF5C3A]/20 text-[#FF5C3A]"
-                            : "bg-white/5"
+                            ? "bg-sky-50 text-[#0284C7] border border-sky-200"
+                            : appt.status === "done"
+                            ? "bg-slate-100 text-slate-500"
+                            : "bg-white border border-slate-200 text-slate-600"
                         }`}
                       >
                         {appt.type}
@@ -160,7 +179,7 @@ export default function Hero() {
             </div>
 
             {/* Fade-out at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0D1117] to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent pointer-events-none" />
           </div>
         </div>
 

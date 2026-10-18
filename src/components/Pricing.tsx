@@ -39,7 +39,7 @@ const plans = [
       "Priority support",
     ],
     cta: "Start Free Trial",
-    ctaHref: "https://app.deskmed.in/setup",
+    ctaHref: "https://app.deskmed.online/setup",
     featured: true,
   },
   {
@@ -58,7 +58,7 @@ const plans = [
       "SLA guarantee",
     ],
     cta: "Contact Sales",
-    ctaHref: "mailto:sales@deskmed.in",
+    ctaHref: "mailto:sales@deskmedai.com",
     featured: false,
   },
 ];
@@ -73,35 +73,35 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="relative overflow-hidden bg-[#FAFAF6] py-24 border-t border-[#E5E5DF]"
+      className="relative overflow-hidden bg-white py-24 border-t border-slate-200/80"
     >
-      {/* Ambient accents */}
+      {/* Ambient background accent */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-[26rem] w-[48rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-[#FF5C3A]/10 blur-[130px]"
+        className="pointer-events-none absolute left-1/2 top-0 h-[26rem] w-[48rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-sky-100/40 blur-[130px]"
       />
 
       <div className="relative max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="mb-10 text-center">
-          <p className="text-[#FF5C3A] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+          <p className="text-[#0284C7] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
             Pricing
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-[#0D1117]">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-[#8A8FA8] mt-4 text-base">
+          <p className="text-slate-600 mt-4 text-base">
             Start free for 14 days. No credit card required.
           </p>
         </div>
 
-        {/* Billing toggle */}
+        {/* Billing toggle (Cal.com segmented style) */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
-          <div className="relative inline-grid grid-cols-2 items-center rounded-full border border-[#E5E5DF] bg-white p-1 shadow-sm">
+          <div className="relative inline-grid grid-cols-2 items-center rounded-full border border-slate-200 bg-slate-100 p-1 shadow-xs">
             {/* Sliding pill */}
             <span
               aria-hidden="true"
-              className={`absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] rounded-full bg-[#0D1117] shadow-md transition-transform duration-300 ease-out ${
+              className={`absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] rounded-full bg-white shadow-sm transition-transform duration-300 ease-out ${
                 cycle === "annual" ? "translate-x-full" : "translate-x-0"
               }`}
             />
@@ -109,8 +109,8 @@ export default function Pricing() {
               type="button"
               onClick={() => setCycle("monthly")}
               aria-pressed={cycle === "monthly"}
-              className={`relative z-10 whitespace-nowrap text-sm font-medium px-7 py-2 rounded-full transition-colors duration-200 ${
-                cycle === "monthly" ? "text-white" : "text-[#8A8FA8] hover:text-[#0D1117]"
+              className={`relative z-10 whitespace-nowrap text-sm font-semibold px-7 py-2 rounded-full transition-colors duration-200 ${
+                cycle === "monthly" ? "text-slate-900" : "text-slate-600 hover:text-slate-900"
               }`}
             >
               Monthly
@@ -119,16 +119,16 @@ export default function Pricing() {
               type="button"
               onClick={() => setCycle("annual")}
               aria-pressed={cycle === "annual"}
-              className={`relative z-10 whitespace-nowrap text-sm font-medium px-7 py-2 rounded-full transition-colors duration-200 ${
-                cycle === "annual" ? "text-white" : "text-[#8A8FA8] hover:text-[#0D1117]"
+              className={`relative z-10 whitespace-nowrap text-sm font-semibold px-7 py-2 rounded-full transition-colors duration-200 ${
+                cycle === "annual" ? "text-slate-900" : "text-slate-600 hover:text-slate-900"
               }`}
             >
               Annual
             </button>
           </div>
 
-          {/* Savings badge — sits beside the toggle, wraps below on narrow screens */}
-          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-[#FF5C3A]/10 px-3 py-1.5 text-xs font-semibold text-[#FF5C3A]">
+          {/* Savings badge */}
+          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1.5 text-xs font-semibold text-emerald-700">
             <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
               <path d="M2.5 7.5L5.5 10.5L11.5 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -137,7 +137,7 @@ export default function Pricing() {
         </div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
           {plans.map((plan) => {
             const showAnnual = cycle === "annual" && !plan.custom;
             const priceValue = plan.custom
@@ -151,22 +151,14 @@ export default function Pricing() {
                 key={plan.name}
                 className={`group relative flex flex-col rounded-2xl p-8 transition-all duration-300 ${
                   plan.featured
-                    ? "bg-[#0D1117] md:-my-3 shadow-2xl shadow-[#FF5C3A]/15 ring-1 ring-white/10 md:z-10"
-                    : "bg-white border border-[#E5E5DF] hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 hover:border-[#D8D8CF]"
+                    ? "bg-gradient-to-b from-sky-50/50 via-white to-white border-2 border-[#0284C7] md:-my-3 shadow-xl ring-4 ring-sky-100/50 md:z-10"
+                    : "bg-white border border-slate-200/90 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300"
                 }`}
               >
-                {/* Coral glow inside featured card */}
-                {plan.featured && (
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -top-px left-1/2 h-32 w-3/4 -translate-x-1/2 rounded-full bg-[#FF5C3A]/25 blur-3xl"
-                  />
-                )}
-
                 <div className="relative flex flex-col h-full">
                   {plan.featured ? (
                     <div className="mb-5">
-                      <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-widest uppercase bg-[#FF5C3A] text-white px-2.5 py-1 rounded-full shadow-lg shadow-[#FF5C3A]/30">
+                      <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-widest uppercase bg-[#0284C7] text-white px-2.5 py-1 rounded-full shadow-xs">
                         <span className="h-1 w-1 rounded-full bg-white" />
                         Most Popular
                       </span>
@@ -175,49 +167,29 @@ export default function Pricing() {
                     <div className="mb-5 h-[22px]" aria-hidden="true" />
                   )}
 
-                  <h3
-                    className={`font-semibold text-lg mb-1 ${
-                      plan.featured ? "text-white" : "text-[#0D1117]"
-                    }`}
-                  >
+                  <h3 className="font-semibold text-lg mb-1 text-slate-900">
                     {plan.name}
                   </h3>
-                  <p
-                    className={`text-sm mb-6 ${
-                      plan.featured ? "text-white/40" : "text-[#8A8FA8]"
-                    }`}
-                  >
+                  <p className="text-sm mb-6 text-slate-500">
                     {plan.tagline}
                   </p>
 
                   {/* Price */}
                   <div className="mb-2">
                     <div className="flex items-end gap-1">
-                      <span
-                        className={`font-display text-5xl font-bold leading-none ${
-                          plan.featured ? "text-white" : "text-[#0D1117]"
-                        }`}
-                      >
+                      <span className="font-display text-5xl font-bold leading-none text-slate-900">
                         {priceValue}
                       </span>
                       {!plan.custom && (
-                        <span
-                          className={`text-sm mb-1 ${
-                            plan.featured ? "text-white/35" : "text-[#8A8FA8]"
-                          }`}
-                        >
+                        <span className="text-sm mb-1 text-slate-500">
                           /mo
                         </span>
                       )}
                     </div>
                   </div>
 
-                  {/* Billing sub-line — fixed height so cards align */}
-                  <p
-                    className={`text-xs mb-8 h-4 ${
-                      plan.featured ? "text-white/30" : "text-[#A8ACBE]"
-                    }`}
-                  >
+                  {/* Billing sub-line */}
+                  <p className="text-xs mb-8 h-4 text-slate-400 font-medium">
                     {plan.custom
                       ? "Tailored to your network"
                       : showAnnual
@@ -225,21 +197,15 @@ export default function Pricing() {
                         : "billed monthly"}
                   </p>
 
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3.5 mb-8">
                     {plan.features.map((f) => (
                       <li
                         key={f}
-                        className={`flex items-start gap-2.5 text-sm ${
-                          plan.featured ? "text-white/65" : "text-[#6B7280]"
-                        }`}
+                        className="flex items-start gap-2.5 text-sm text-slate-700"
                       >
-                        <span
-                          className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full mt-0.5 ${
-                            plan.featured ? "bg-[#FF5C3A]/20" : "bg-[#FF5C3A]/10"
-                          }`}
-                        >
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full mt-0.5 bg-sky-50 text-[#0284C7] ring-1 ring-sky-200">
                           <svg
-                            className="text-[#FF5C3A]"
+                            className="text-[#0284C7]"
                             width="10"
                             height="10"
                             viewBox="0 0 14 14"
@@ -263,8 +229,10 @@ export default function Pricing() {
                     href={plan.ctaHref}
                     className={`mt-auto block text-center py-3 rounded-xl font-medium text-sm transition-all duration-200 ${
                       plan.featured
-                        ? "bg-[#FF5C3A] text-white hover:bg-[#e84e2d] hover:-translate-y-0.5 shadow-lg shadow-[#FF5C3A]/25"
-                        : "bg-[#0D1117] text-white hover:bg-[#1a2234]"
+                        ? "bg-[#0284C7] text-white hover:bg-[#0369A1] hover:-translate-y-0.5 shadow-md shadow-sky-600/20"
+                        : plan.custom
+                        ? "bg-[#0F172A] text-white hover:bg-[#1E293B]"
+                        : "bg-slate-100 text-slate-900 hover:bg-slate-200"
                     }`}
                   >
                     {plan.cta}
@@ -276,7 +244,7 @@ export default function Pricing() {
         </div>
 
         {/* Reassurance row */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-[#8A8FA8]">
+        <div className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-600">
           {[
             "14-day free trial",
             "No credit card required",
@@ -284,7 +252,7 @@ export default function Pricing() {
           ].map((item) => (
             <span key={item} className="inline-flex items-center gap-2">
               <svg
-                className="text-[#16A34A]"
+                className="text-emerald-600"
                 width="15"
                 height="15"
                 viewBox="0 0 14 14"

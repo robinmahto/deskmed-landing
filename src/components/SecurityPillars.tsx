@@ -81,16 +81,16 @@ const pillars = [
 
 export default function SecurityPillars() {
   return (
-    <section className="relative bg-[#FAFAF6] py-24 sm:py-28">
+    <section className="relative bg-slate-50/50 py-24 sm:py-28 border-t border-slate-200/80">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF5C3A]">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0284C7]">
             How we protect you
           </p>
-          <h2 className="font-display text-3xl font-bold leading-tight text-[#0D1117] sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
             Security at every layer
           </h2>
-          <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-[#1C1C28]/65">
+          <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-slate-600">
             From the database to the browser, here&rsquo;s what keeps your
             clinic&rsquo;s data safe.
           </p>
@@ -100,17 +100,17 @@ export default function SecurityPillars() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="group rounded-2xl border border-[#E5E5DF] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#FF5C3A]/30 hover:shadow-xl hover:shadow-[#0D1117]/5"
+              className="group rounded-2xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl hover:shadow-slate-900/5"
             >
-              <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#FF5C3A]/10 text-[#FF5C3A] ring-1 ring-[#FF5C3A]/15 transition-transform duration-300 group-hover:-translate-y-0.5">
+              <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-50 text-[#0284C7] ring-1 ring-sky-200 transition-transform duration-300 group-hover:-translate-y-0.5">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   {pillar.icon}
                 </svg>
               </span>
-              <h3 className="mb-2 text-lg font-semibold text-[#0D1117]">
+              <h3 className="mb-2 text-lg font-semibold text-slate-900">
                 {pillar.title}
               </h3>
-              <p className="text-sm leading-relaxed text-[#1C1C28]/65">
+              <p className="text-sm leading-relaxed text-slate-600">
                 {pillar.body}
               </p>
             </div>

@@ -23,18 +23,18 @@ const certifications = [
 
 export default function SecurityCompliance() {
   return (
-    <section className="relative overflow-hidden bg-[#0D1117] py-24 sm:py-28">
+    <section className="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28">
       {/* Dotted texture */}
-      <div aria-hidden="true" className="bg-dot-grid absolute inset-0 opacity-60" />
-      {/* Ambient coral glow */}
+      <div aria-hidden="true" className="bg-dot-grid-dark absolute inset-0 opacity-60" />
+      {/* Ambient blue glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-1/3 h-72 w-72 rounded-full bg-[#FF5C3A] opacity-20 blur-[120px]"
+        className="pointer-events-none absolute left-0 top-1/3 h-72 w-72 rounded-full bg-[#0284C7] opacity-20 blur-[120px]"
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF5C3A]">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0284C7]">
             Compliance & residency
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
@@ -57,7 +57,7 @@ export default function SecurityCompliance() {
                 <h3 className="text-base font-semibold text-white">
                   {cert.name}
                 </h3>
-                <span className="shrink-0 rounded-full bg-[#FF5C3A]/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#FF5C3A]">
+                <span className="shrink-0 rounded-full bg-[#0284C7]/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#0284C7]">
                   {cert.status}
                 </span>
               </div>
@@ -89,7 +89,7 @@ export default function SecurityCompliance() {
           </div>
 
           {/* Responsible disclosure */}
-          <div className="flex flex-col justify-between rounded-2xl border border-[#FF5C3A]/20 bg-[#FF5C3A]/[0.06] p-7">
+          <div className="flex flex-col justify-between rounded-2xl border border-[#0284C7]/20 bg-[#0284C7]/[0.06] p-7">
             <div>
               <h3 className="text-lg font-semibold text-white">
                 Found a vulnerability?
@@ -101,10 +101,10 @@ export default function SecurityCompliance() {
               </p>
             </div>
             <a
-              href="mailto:security@deskmed.in"
-              className="group mt-6 inline-flex w-fit items-center gap-2 rounded-xl bg-[#FF5C3A] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e84e2d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5C3A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1117]"
+              href="mailto:security@deskmedai.com"
+              className="group mt-6 inline-flex w-fit items-center gap-2 rounded-xl bg-[#0284C7] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0369A1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
             >
-              security@deskmed.in
+              security@deskmedai.com
               <svg
                 width="14"
                 height="14"

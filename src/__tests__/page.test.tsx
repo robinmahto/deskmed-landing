@@ -6,7 +6,7 @@ describe("Page", () => {
     render(<Page />);
 
     // Navbar — logo
-    expect(screen.getAllByText("DeskMed").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("DeskMed AI").length).toBeGreaterThanOrEqual(1);
     // Hero — h1
     expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
     // SocialProof — clinics stat

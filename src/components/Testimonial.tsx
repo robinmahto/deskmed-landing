@@ -50,19 +50,19 @@ export default function Testimonial() {
   }, [count]);
 
   return (
-    <section id="testimonials" className="bg-[#0D1117] py-24 overflow-hidden">
+    <section id="testimonials" className="bg-slate-50/70 border-t border-slate-200/80 py-24 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
 
         {/* Eyebrow */}
-        <p className="text-[#FF5C3A] text-xs font-semibold tracking-widest uppercase mb-12 text-center">
+        <p className="text-[#0284C7] text-xs font-semibold tracking-widest uppercase mb-12 text-center">
           Loved by clinics across India
         </p>
 
-        <div className="relative max-w-3xl mx-auto">
-          {/* Giant decorative quote mark */}
+        <div className="relative max-w-3xl mx-auto bg-white rounded-2xl border border-slate-200/90 p-8 sm:p-12 shadow-sm">
+          {/* Decorative quote mark */}
           <div
-            className="absolute -top-10 -left-2 text-[160px] leading-none select-none pointer-events-none z-0"
-            style={{ color: "rgba(255,255,255,0.05)", fontFamily: "Georgia, serif", lineHeight: 1 }}
+            className="absolute top-2 left-6 text-[100px] leading-none select-none pointer-events-none z-0"
+            style={{ color: "rgba(2, 132, 199, 0.08)", fontFamily: "Georgia, serif" }}
             aria-hidden="true"
           >
             &ldquo;
@@ -76,28 +76,28 @@ export default function Testimonial() {
             >
               {testimonials.map((t) => (
                 <blockquote key={t.name} className="w-full shrink-0 px-1">
-                  <p className="font-display text-2xl md:text-[1.875rem] text-white leading-[1.5] mb-10 font-medium text-center min-h-[8.5rem] md:min-h-[7rem] flex items-center justify-center">
-                    {t.quote}
+                  <p className="font-display text-xl sm:text-2xl text-slate-900 leading-[1.6] mb-10 font-normal text-center min-h-[8.5rem] md:min-h-[7rem] flex items-center justify-center">
+                    &ldquo;{t.quote}&rdquo;
                   </p>
 
                   <footer className="flex items-center justify-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF5C3A] to-[#FF8F73] flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#0284C7] to-[#0D9488] flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-xs">
                       {t.initials}
                     </div>
                     <div className="text-left">
                       <div className="flex items-center gap-2.5">
-                        <p className="text-white font-semibold text-sm">{t.name}</p>
+                        <p className="text-slate-900 font-semibold text-sm">{t.name}</p>
                         <div className="flex items-center gap-0.5">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} width="12" height="12" viewBox="0 0 14 14" fill="#FF5C3A">
+                            <svg key={i} width="12" height="12" viewBox="0 0 14 14" fill="#F59E0B">
                               <path d="M7 1l1.545 3.09L12 4.635l-2.5 2.455.59 3.46L7 9l-3.09 1.55.59-3.46L2 4.635l3.455-.545L7 1z"/>
                             </svg>
                           ))}
                         </div>
                       </div>
-                      <p className="text-white/35 text-xs mt-1">
+                      <p className="text-slate-500 text-xs mt-0.5">
                         <span>{t.clinic}</span>
-                        <span className="text-white/20"> · {t.meta}</span>
+                        <span className="text-slate-400"> · {t.meta}</span>
                       </p>
                     </div>
                   </footer>
@@ -112,7 +112,7 @@ export default function Testimonial() {
               type="button"
               aria-label="Previous testimonial"
               onClick={() => go(active - 1)}
-              className="w-9 h-9 rounded-full border border-white/10 text-white/50 flex items-center justify-center hover:border-[#FF5C3A]/50 hover:text-[#FF5C3A] transition-colors duration-200"
+              className="w-9 h-9 rounded-full border border-slate-200 bg-white text-slate-600 flex items-center justify-center hover:border-slate-300 hover:text-slate-900 shadow-xs transition-colors duration-200"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M9 3L5 7l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -129,7 +129,7 @@ export default function Testimonial() {
                   aria-current={i === active}
                   onClick={() => setActive(i)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    i === active ? "w-6 bg-[#FF5C3A]" : "w-2 bg-white/20 hover:bg-white/40"
+                    i === active ? "w-6 bg-[#0284C7]" : "w-2 bg-slate-200 hover:bg-slate-300"
                   }`}
                 />
               ))}
@@ -139,7 +139,7 @@ export default function Testimonial() {
               type="button"
               aria-label="Next testimonial"
               onClick={() => go(active + 1)}
-              className="w-9 h-9 rounded-full border border-white/10 text-white/50 flex items-center justify-center hover:border-[#FF5C3A]/50 hover:text-[#FF5C3A] transition-colors duration-200"
+              className="w-9 h-9 rounded-full border border-slate-200 bg-white text-slate-600 flex items-center justify-center hover:border-slate-300 hover:text-slate-900 shadow-xs transition-colors duration-200"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M5 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -149,14 +149,14 @@ export default function Testimonial() {
         </div>
 
         {/* Outcome stats */}
-        <div className="mt-16 pt-12 border-t border-white/8 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4">
+        <div className="mt-16 pt-12 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-display text-4xl md:text-5xl font-bold text-[#FF5C3A] leading-none mb-3">
+              <p className="font-display text-4xl md:text-5xl font-bold text-[#0284C7] leading-none mb-3 tabular-nums">
                 {stat.value}
               </p>
-              <p className="text-white font-semibold text-sm mb-1">{stat.label}</p>
-              <p className="text-white/35 text-xs leading-relaxed max-w-[14rem] mx-auto">
+              <p className="text-slate-900 font-semibold text-sm mb-1">{stat.label}</p>
+              <p className="text-slate-500 text-xs leading-relaxed max-w-[14rem] mx-auto">
                 {stat.sub}
               </p>
             </div>

@@ -27,7 +27,7 @@ describe("Pricing", () => {
     expect(screen.getByText("Enterprise")).toBeInTheDocument();
     expect(screen.getByText("Custom")).toBeInTheDocument();
     const contactSales = screen.getByRole("link", { name: "Contact Sales" });
-    expect(contactSales).toHaveAttribute("href", "mailto:sales@deskmed.in");
+    expect(contactSales).toHaveAttribute("href", "mailto:sales@deskmedai.com");
   });
 
   it("defaults to monthly billing", () => {

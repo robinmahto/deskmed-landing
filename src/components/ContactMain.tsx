@@ -3,17 +3,17 @@
 import { useEffect, useRef, useState } from "react";
 
 const inquiryTypes = [
-  { value: "sales", label: "Sales & demo", email: "sales@deskmed.in" },
-  { value: "support", label: "Product support", email: "support@deskmed.in" },
-  { value: "partnership", label: "Partnership", email: "partnerships@deskmed.in" },
-  { value: "other", label: "Something else", email: "hello@deskmed.in" },
+  { value: "sales", label: "Sales & demo", email: "sales@deskmedai.com" },
+  { value: "support", label: "Product support", email: "support@deskmedai.com" },
+  { value: "partnership", label: "Partnership", email: "partnerships@deskmedai.com" },
+  { value: "other", label: "Something else", email: "hello@deskmedai.com" },
 ];
 
 const channels = [
   {
     label: "Sales & demos",
-    value: "sales@deskmed.in",
-    href: "mailto:sales@deskmed.in",
+    value: "sales@deskmedai.com",
+    href: "mailto:sales@deskmedai.com",
     icon: (
       <path
         d="M2.5 5.5h15v9h-15v-9Zm0 .5 7.5 5 7.5-5"
@@ -26,8 +26,8 @@ const channels = [
   },
   {
     label: "Existing clinics",
-    value: "support@deskmed.in",
-    href: "mailto:support@deskmed.in",
+    value: "support@deskmedai.com",
+    href: "mailto:support@deskmedai.com",
     icon: (
       <path
         d="M10 2.8l5.5 2.2v4.3c0 3.7-2.4 6.4-5.5 7.9-3.1-1.5-5.5-4.2-5.5-7.9V5L10 2.8Z"
@@ -83,10 +83,10 @@ const initialForm: Record<Field, string> = {
 
 // Shared light-theme input styling.
 function inputClass(hasError?: boolean) {
-  return `w-full rounded-xl border bg-[#FAFAF6] px-4 py-3.5 text-base text-[#1C1C28] placeholder:text-[#8A8FA8] transition-colors duration-200 focus:bg-white focus:outline-none focus:ring-2 ${
+  return `w-full rounded-xl border bg-white px-4 py-3.5 text-base text-slate-900 placeholder:text-slate-400 transition-colors duration-200 focus:outline-none focus:ring-2 ${
     hasError
-      ? "border-[#DC2626] focus:border-[#DC2626] focus:ring-[#DC2626]/25"
-      : "border-[#E5E5DF] focus:border-[#FF5C3A] focus:ring-[#FF5C3A]/30"
+      ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+      : "border-slate-200 focus:border-[#0284C7] focus:ring-[#0284C7]/20"
   }`;
 }
 
@@ -163,34 +163,24 @@ export default function ContactMain({
   return (
     <section
       id={id}
-      className="relative overflow-hidden bg-[#FAFAF6] py-24 sm:py-28"
+      className="relative overflow-hidden bg-slate-50/50 py-24 sm:py-28 border-t border-slate-200/80"
     >
-      {/* Soft coral glow */}
+      {/* Soft sky glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-24 top-1/4 h-72 w-[34rem] rounded-full bg-[#FF5C3A] opacity-[0.06] blur-[130px]"
-      />
-      {/* Faint dotted texture */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-60"
-        style={{
-          backgroundImage:
-            "radial-gradient(rgba(13,17,23,0.045) 1px, transparent 1px)",
-          backgroundSize: "22px 22px",
-        }}
+        className="pointer-events-none absolute -left-24 top-1/4 h-72 w-[34rem] rounded-full bg-sky-100 opacity-60 blur-[130px]"
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
         {showIntro && (
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF5C3A]">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0284C7]">
               Get in touch
             </p>
-            <h2 className="font-display text-3xl font-bold leading-tight text-[#0D1117] sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
               Have a question? Let&rsquo;s talk.
             </h2>
-            <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-[#1C1C28]/65">
+            <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-slate-600">
               Book a demo or ask us anything about running your clinic on
               DeskMed. A real person replies within one business day.
             </p>
@@ -198,9 +188,9 @@ export default function ContactMain({
         )}
 
         {/* Split card */}
-        <div className="grid overflow-hidden rounded-[28px] border border-[#E5E5DF] bg-white shadow-xl shadow-[#0D1117]/5 lg:grid-cols-5">
-          {/* Coral channels panel */}
-          <aside className="relative overflow-hidden bg-gradient-to-br from-[#FF5C3A] to-[#e8431f] p-8 sm:p-10 lg:col-span-2">
+        <div className="grid overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-xl shadow-slate-900/5 lg:grid-cols-5">
+          {/* Deep slate channels panel */}
+          <aside className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] p-8 sm:p-10 lg:col-span-2">
             {/* Decorative dot field + soft highlight */}
             <div
               aria-hidden="true"
@@ -306,10 +296,10 @@ export default function ContactMain({
                   Your email app should have opened with the details filled in.
                   If it didn&rsquo;t, write to us directly at{" "}
                   <a
-                    href="mailto:sales@deskmed.in"
-                    className="font-medium text-[#FF5C3A] underline-offset-2 hover:underline"
+                    href="mailto:sales@deskmedai.com"
+                    className="font-medium text-[#0284C7] underline-offset-2 hover:underline"
                   >
-                    sales@deskmed.in
+                    sales@deskmedai.com
                   </a>
                   . We&rsquo;ll reply within one business day.
                 </p>
@@ -320,17 +310,17 @@ export default function ContactMain({
                     setForm(initialForm);
                   }}
                   style={{ touchAction: "manipulation" }}
-                  className="mt-7 rounded-lg px-3 py-2 text-sm font-medium text-[#1C1C28]/60 underline-offset-4 transition-colors hover:text-[#0D1117] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5C3A]"
+                  className="mt-7 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 underline-offset-4 transition-colors hover:text-slate-900 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7]"
                 >
                   Send another message
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate>
-                <h2 className="font-display text-2xl font-bold text-[#0D1117]">
+                <h2 className="font-display text-2xl font-bold text-slate-900">
                   Send us a message
                 </h2>
-                <p className="mt-1.5 text-sm text-[#1C1C28]/55">
+                <p className="mt-1.5 text-sm text-slate-500">
                   Fields marked with an asterisk (*) are required.
                 </p>
 
@@ -388,7 +378,7 @@ export default function ContactMain({
                 <div className="mt-5">
                   <label
                     htmlFor="message"
-                    className="mb-2 block text-sm font-medium text-[#1C1C28]"
+                    className="mb-2 block text-sm font-medium text-slate-900"
                   >
                     Message *
                   </label>
@@ -410,7 +400,7 @@ export default function ContactMain({
                     <p
                       id="message-error"
                       role="alert"
-                      className="mt-2 flex items-center gap-1.5 text-xs text-[#DC2626]"
+                      className="mt-2 flex items-center gap-1.5 text-xs text-red-600"
                     >
                       <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
                         <path
@@ -430,7 +420,7 @@ export default function ContactMain({
                   <button
                     type="submit"
                     style={{ touchAction: "manipulation" }}
-                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#FF5C3A] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#FF5C3A]/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e84e2d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5C3A] focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0284C7] px-7 py-3.5 text-sm font-semibold text-white shadow-md shadow-sky-600/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0369A1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7] focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
                   >
                     Send message
                     <svg
@@ -449,7 +439,7 @@ export default function ContactMain({
                       />
                     </svg>
                   </button>
-                  <p className="text-xs text-[#1C1C28]/45">
+                  <p className="text-xs text-slate-500">
                     We&rsquo;ll never share your details. No spam, ever.
                   </p>
                 </div>
@@ -588,12 +578,12 @@ function CustomSelect({
         onClick={() => (open ? setOpen(false) : openMenu())}
         onKeyDown={onKeyDown}
         style={{ touchAction: "manipulation" }}
-        className="flex w-full items-center justify-between rounded-xl border border-[#E5E5DF] bg-[#FAFAF6] px-4 py-3.5 text-base text-[#1C1C28] transition-colors duration-200 hover:border-[#d6d6cd] focus-visible:border-[#FF5C3A] focus-visible:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5C3A]/30"
+        className="flex w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-base text-slate-900 transition-colors duration-200 hover:border-slate-300 focus-visible:border-[#0284C7] focus-visible:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7]/20"
       >
         <span id={valueId}>{selected.label}</span>
         <svg
           aria-hidden="true"
-          className={`shrink-0 text-[#8A8FA8] transition-transform duration-200 ${
+          className={`shrink-0 text-slate-400 transition-transform duration-200 ${
             open ? "rotate-180" : ""
           }`}
           width="14"
@@ -618,7 +608,7 @@ function CustomSelect({
           role="listbox"
           aria-labelledby={labelId}
           tabIndex={-1}
-          className="absolute z-30 mt-2 max-h-60 w-full overflow-auto rounded-xl border border-[#E5E5DF] bg-white p-1.5 shadow-xl shadow-[#0D1117]/10"
+          className="absolute z-30 mt-2 max-h-60 w-full overflow-auto rounded-xl border border-slate-200 bg-white p-1.5 shadow-xl shadow-slate-900/10"
         >
           {options.map((opt, index) => {
             const isSelected = opt.value === value;
@@ -633,15 +623,15 @@ function CustomSelect({
                 onClick={() => choose(index)}
                 className={`flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3.5 py-2.5 text-sm transition-colors duration-150 ${
                   isActive
-                    ? "bg-[#0D1117]/[0.05] text-[#0D1117]"
-                    : "text-[#1C1C28]/75"
+                    ? "bg-sky-50 text-[#0284C7] font-medium"
+                    : "text-slate-700"
                 }`}
               >
                 {opt.label}
                 {isSelected && (
                   <svg
                     aria-hidden="true"
-                    className="shrink-0 text-[#FF5C3A]"
+                    className="shrink-0 text-[#0284C7]"
                     width="15"
                     height="15"
                     viewBox="0 0 16 16"
@@ -690,7 +680,7 @@ function FormField({
     <div>
       <label
         htmlFor={id}
-        className="mb-2 block text-sm font-medium text-[#1C1C28]"
+        className="mb-2 block text-sm font-medium text-slate-900"
       >
         {label}
       </label>
@@ -711,7 +701,7 @@ function FormField({
         <p
           id={`${id}-error`}
           role="alert"
-          className="mt-2 flex items-center gap-1.5 text-xs text-[#DC2626]"
+          className="mt-2 flex items-center gap-1.5 text-xs text-red-600"
         >
           <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
             <path

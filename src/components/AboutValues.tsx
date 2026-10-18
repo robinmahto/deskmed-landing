@@ -55,18 +55,18 @@ const values = [
 
 export default function AboutValues() {
   return (
-    <section className="relative overflow-hidden bg-[#0D1117] py-24 sm:py-28">
+    <section className="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28">
       {/* Dotted texture */}
-      <div aria-hidden="true" className="bg-dot-grid absolute inset-0 opacity-60" />
-      {/* Ambient coral glow */}
+      <div aria-hidden="true" className="bg-dot-grid-dark absolute inset-0 opacity-60" />
+      {/* Ambient blue glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-1/3 h-72 w-72 rounded-full bg-[#FF5C3A] opacity-20 blur-[120px]"
+        className="pointer-events-none absolute right-0 top-1/3 h-72 w-72 rounded-full bg-[#0284C7] opacity-20 blur-[120px]"
       />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF5C3A]">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0284C7]">
             What We Value
           </p>
           <h2 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
@@ -78,9 +78,9 @@ export default function AboutValues() {
           {values.map((value) => (
             <div
               key={value.title}
-              className="group rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#FF5C3A]/30 hover:bg-white/[0.04]"
+              className="group rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0284C7]/30 hover:bg-white/[0.04]"
             >
-              <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#FF5C3A]/10 text-[#FF5C3A] ring-1 ring-[#FF5C3A]/20 transition-transform duration-300 group-hover:-translate-y-0.5">
+              <span className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#0284C7]/15 text-[#0284C7] ring-1 ring-[#0284C7]/20 transition-transform duration-300 group-hover:-translate-y-0.5">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   {value.icon}
                 </svg>

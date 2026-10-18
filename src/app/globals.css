@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --cream: #FAFAF6;
-  --navy: #0D1117;
-  --coral: #FF5C3A;
-  --text: #1C1C28;
-  --muted: #8A8FA8;
-  --border: #E5E5DF;
+  --cream: #FFFFFF;
+  --navy: #0F172A;
+  --clinical: #0284C7;
+  --text: #0F172A;
+  --muted: #64748B;
+  --border: #E2E8F0;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 body {
   font-family: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
   color: var(--text);
-  background: var(--cream);
+  background: #FFFFFF;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -59,10 +59,15 @@ body {
   animation: glowPulse 7s ease-in-out infinite;
 }
 
-/* Subtle dotted texture for dark surfaces */
+/* Subtle dotted texture for clean light surfaces */
 .bg-dot-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-dot-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 /* ECG trace draw-on for the 404 vitals monitor */
