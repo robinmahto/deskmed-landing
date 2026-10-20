@@ -1,4 +1,16 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="8" fill="#FF5C3A"/>
-  <path d="M16 8v16M8 16h16" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="deskmed-ai-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded container -->
+  <rect width="32" height="32" rx="7.5" fill="url(#deskmed-ai-grad)"/>
+
+  <!-- Clinical Cross -->
+  <path d="M16 8v16M8 16h16" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- DeskMed AI Sparkle -->
+  <path d="M24 4.5c0 1.4 1.1 2.5 2.5 2.5-1.4 0-2.5 1.1-2.5 2.5 0-1.4-1.1-2.5-2.5-2.5 1.4 0 2.5-1.1 2.5-2.5z" fill="#E0F2FE"/>
 </svg>

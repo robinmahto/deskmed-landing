@@ -10,19 +10,31 @@ describe("Features", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders all 6 features as tabs", () => {
+  it("renders all 8 features as tabs including AI Scribe and ABDM", () => {
     render(<Features />);
     const labels = [
       "Smart Appointments",
       "EMR & Consultations",
+      "AI Medical Scribe",
       "Prescriptions",
-      "Lab Management",
       "GST Billing",
       "WhatsApp Alerts",
+      "Lab Management",
+      "ABDM & ABHA Integration",
     ];
     for (const label of labels) {
       expect(screen.getByRole("tab", { name: label })).toBeInTheDocument();
     }
+  });
+
+  it("renders the clinic demand workflow spotlight section", () => {
+    render(<Features />);
+    expect(
+      screen.getByRole("heading", { name: /The Features Clinics Actually Ask For/i })
+    ).toBeInTheDocument();
+    expect(screen.getByText("Zero-Typing Ambient AI Scribe")).toBeInTheDocument();
+    expect(screen.getByText("Dynamic Counter UPI QR")).toBeInTheDocument();
+    expect(screen.getByText("ABDM & ABHA Card in 30s")).toBeInTheDocument();
   });
 
   it("selects the first feature by default and shows its panel", () => {

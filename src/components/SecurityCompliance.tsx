@@ -1,5 +1,10 @@
 const certifications = [
   {
+    name: "ABDM & ABHA",
+    status: "Aligned",
+    note: "Built to National Health Authority (NHA) specifications for ABHA creation and FHIR record exchange.",
+  },
+  {
     name: "DPDP Act 2023",
     status: "Aligned",
     note: "Built to India's Digital Personal Data Protection Act for consent, access, and erasure.",
@@ -8,11 +13,6 @@ const certifications = [
     name: "ISO 27001",
     status: "In progress",
     note: "Information-security management certification, currently underway.",
-  },
-  {
-    name: "SOC 2 Type II",
-    status: "On roadmap",
-    note: "Independent audit of our security and availability controls.",
   },
   {
     name: "HIPAA-aligned",

@@ -17,7 +17,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span className="font-medium text-slate-800">Trusted by 2,400+ clinics across India</span>
+            <span className="font-medium text-slate-800">Trusted by 2,400+ clinics across India · ABDM &amp; ABHA Ready</span>
           </span>
         </div>
 
@@ -31,8 +31,8 @@ export default function Hero() {
         </h1>
 
         {/* Subtext */}
-        <p className="text-center text-slate-600 text-lg max-w-lg mx-auto leading-relaxed mb-10">
-          Appointments, EMR, prescriptions, billing, lab reports — built for how Indian clinics actually work. Free to start.
+        <p className="text-center text-slate-600 text-lg max-w-xl mx-auto leading-relaxed mb-10">
+          Appointments, EMR, prescriptions, AI voice notes, dynamic UPI billing, and lab reports — built for how Indian clinics actually work. Free to start.
         </p>
 
         {/* CTAs */}
@@ -87,13 +87,14 @@ export default function Hero() {
                       <path d="M5 1v8M1 5h8" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <span className="text-slate-900 text-xs font-bold tracking-tight">DeskMed</span>
+                  <span className="text-slate-900 text-xs font-bold tracking-tight">DeskMed AI</span>
                 </div>
                 {[
                   { label: "Dashboard", active: true },
-                  { label: "Patients", active: false },
-                  { label: "Appointments", active: false },
-                  { label: "Billing", active: false },
+                  { label: "Patients & ABHA", active: false },
+                  { label: "Appointments & Queue", active: false },
+                  { label: "AI Scribe & EMR", active: false },
+                  { label: "Billing & UPI", active: false },
                   { label: "Lab Reports", active: false },
                 ].map((item) => (
                   <div
@@ -113,17 +114,23 @@ export default function Hero() {
               <div className="flex-1 p-4 sm:p-5 overflow-hidden bg-white">
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-slate-900 font-semibold text-xs">Good morning, Dr. Mehta</div>
-                  <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    OPD Active · Token #14
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="hidden sm:inline-flex items-center gap-1 text-[10px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
+                      ABDM Compliant
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      OPD Active · Token #14
+                    </span>
+                  </div>
                 </div>
 
                 {/* Stat cards */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
                   {[
                     { label: "Today's Patients", value: "24", delta: "+3 queue", deltaColor: "text-emerald-600 bg-emerald-50" },
-                    { label: "Pending Billing", value: "₹18.4k", delta: "4 invoices", deltaColor: "text-amber-700 bg-amber-50" },
+                    { label: "Pending Billing", value: "₹18.4k", delta: "UPI ready", deltaColor: "text-amber-700 bg-amber-50" },
                     { label: "Lab Reports", value: "7", delta: "new ready", deltaColor: "text-sky-700 bg-sky-50" },
                   ].map((stat) => (
                     <div key={stat.label} className="bg-slate-50/70 border border-slate-200/80 rounded-xl p-2.5 sm:p-3 shadow-xs">
